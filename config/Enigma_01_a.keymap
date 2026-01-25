@@ -5,6 +5,13 @@
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
+&mt {
+    flavor = "balanced";
+    quick-tap-ms = <300>;
+};
+
+&lt { quick-tap-ms = <300>; };
+
 / {
     // zmk-listeners
 
@@ -45,6 +52,27 @@
                 <&to 0>;
 
             label = "MO_to_0";
+        };
+
+        space4: space4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp SPACE &kp SPACE &kp SPACE>;
+            label = "SPACE4";
+        };
+
+        right4: right4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>;
+            label = "RIGHT4";
+        };
+
+        left4: left4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+            label = "LEFT4";
         };
     };
 
@@ -168,9 +196,44 @@
     combos {
         compatible = "zmk,combos";
 
-        mo_setting {
-            bindings = <&mo 3>;
-            key-positions = <36 35>;
+        cmb_delete {
+            bindings = <&kp DELETE>;
+            key-positions = <10 11>;
+        };
+
+        cmb_combo {
+            bindings = <&kp ESCAPE>;
+            key-positions = <2 3>;
+        };
+
+        cmb_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <21 20>;
+        };
+
+        cmb_single {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <30 31>;
+        };
+
+        cmb_jp {
+            bindings = <&kp LANG1>;
+            key-positions = <29 28>;
+        };
+
+        cmb_eng {
+            bindings = <&kp LANG2>;
+            key-positions = <25 24>;
+        };
+
+        cmb_mb2 {
+            bindings = <&mkp MB2>;
+            key-positions = <14 15>;
+        };
+
+        cmb_mb3 {
+            bindings = <&mkp MB3>;
+            key-positions = <22 23>;
         };
     };
 
