@@ -57,9 +57,9 @@ layers:
   - (
   - )
   - {t: ▽, type: trans}
-  - Ctl+S
-  - Ctl+D
-  - Ctl+F
+  - {t: F4, h: LCTRL}
+  - {t: F5, h: LEFT ALT}
+  - {t: F6, h: LSHIFT}
   - F11
   - $
   - {t: '%', h: RSHIFT}
