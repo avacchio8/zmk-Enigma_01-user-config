@@ -35,7 +35,7 @@ layers:
   - {t: /, h: RSHIFT}
   - ''
   - ''
-  - '&mkp MB1'
+  - ''
   - {t: SPACE, h: FUNC_SYMBOL}
   - {t: TAB, h: CUSTOM}
   - {t: ENTER, h: CUSTOM}
